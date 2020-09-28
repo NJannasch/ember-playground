@@ -1,0 +1,14 @@
+<h2>{{@title}}</h2>
+
+<div class="flex flex-col">
+
+        {{#each @projects as |project|}}
+            <div class="flex flex-row">
+                <div class="w-1/2 bg-gray-400 h-12">{{project}}</div>
+                <div class="w-1/2 bg-gray-400 h-12">
+                    <button type="button" {{on 'click' (fn this.likeProject project)}}>Like</button>
+                </div>
+            </div>
+        {{/each}}
+
+</div>
